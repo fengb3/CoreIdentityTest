@@ -1,0 +1,14 @@
+﻿@page "/logout"
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager Navigation
+
+<button @onclick="OnLogout">登出</button>
+
+@code {
+    private async Task OnLogout()
+    {
+        await ((CustomAuthenticationStateProvider)AuthenticationStateProvider).MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/");
+    }
+}
