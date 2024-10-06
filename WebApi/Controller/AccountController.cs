@@ -88,6 +88,7 @@ namespace WebApi.Controller
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Name,user.UserName)
                 // 添加其他声明，如角色等
             };
 

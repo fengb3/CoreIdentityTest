@@ -2,6 +2,7 @@
 @using Microsoft.AspNetCore.Authorization
 @inject HttpClient Http
 @inject ILogger<Weather> Logger
+@attribute [Authorize]
 
 <PageTitle>Weather</PageTitle>
 
